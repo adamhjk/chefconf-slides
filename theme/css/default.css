@@ -301,11 +301,11 @@ slides > slide.dark {
 /* line 171, ../scss/default.scss */
 slides > slide:not(.nobackground):before {
   font-size: 12pt;
-  content: "#yourhashtag";
+  content: "#ChefConf";
   position: absolute;
   bottom: 20px;
   left: 60px;
-  background: url(../../images/google_developers_icon_128.png) no-repeat 0 50%;
+  background: url(../../images/chef_icon_128.png) no-repeat 0 50%;
   -webkit-background-size: 30px 30px;
   -moz-background-size: 30px 30px;
   -o-background-size: 30px 30px;
@@ -326,7 +326,7 @@ slides > slide:not(.nobackground):after {
 /* line 194, ../scss/default.scss */
 slides > slide.title-slide:after {
   content: '';
-  background: url(../../images/io2012_logo.png) no-repeat 100% 50%;
+  background: url(../../images/chefconf_logo.png) no-repeat 100% 50%;
   -webkit-background-size: contain;
   -moz-background-size: contain;
   -o-background-size: contain;
@@ -1024,11 +1024,11 @@ article.smaller q:before, article.smaller q:after {
 }
 /* line 714, ../scss/default.scss */
 .with-notes.popup slide.backdrop {
-  background-image: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 600, color-stop(0%, #b1dfff), color-stop(100%, #4387fd));
-  background-image: -webkit-radial-gradient(50% 50%, #b1dfff 0%, #4387fd 600px);
-  background-image: -moz-radial-gradient(50% 50%, #b1dfff 0%, #4387fd 600px);
-  background-image: -o-radial-gradient(50% 50%, #b1dfff 0%, #4387fd 600px);
-  background-image: radial-gradient(50% 50%, #b1dfff 0%, #4387fd 600px);
+  background-image: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 600, color-stop(0%, #b1dfff), color-stop(100%, #333333));
+  background-image: -webkit-radial-gradient(50% 50%, #b1dfff 0%, #333333 600px);
+  background-image: -moz-radial-gradient(50% 50%, #b1dfff 0%, #333333 600px);
+  background-image: -o-radial-gradient(50% 50%, #b1dfff 0%, #333333 600px);
+  background-image: radial-gradient(50% 50%, #b1dfff 0%, #333333 600px);
 }
 /* line 720, ../scss/default.scss */
 .with-notes.popup slide.next {
@@ -1216,8 +1216,8 @@ article.smaller q:before, article.smaller q:after {
 /* ===== SLIDE CONTENT ===== */
 /* line 839, ../scss/default.scss */
 .logoslide img {
-  width: 383px;
-  height: 92px;
+  width: 500px;
+  height: 400px;
 }
 
 /* line 845, ../scss/default.scss */
@@ -1242,7 +1242,7 @@ article.smaller q:before, article.smaller q:after {
 
 /* line 862, ../scss/default.scss */
 .thank-you-slide {
-  background: #4387fd !important;
+  background: #333333 !important;
   color: white;
 }
 /* line 866, ../scss/default.scss */

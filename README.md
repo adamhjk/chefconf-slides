@@ -1,52 +1,9 @@
-<style>
-@import "http://fonts.googleapis.com/css?family=Open Sans:regular,semibold,italic,italicsemibold|Inconsolata&amp;v2";
-body {
-  font-family: "Open Sans";
-  margin: 6em 2em 2em 2em;
-}
-body:before {
-  content: '';
-  position: fixed;
-  top: 2%;
-  right: 3%;
-  height: 100px;
-  width: 100px;
-  background: url(http://www.html5rocks.com/static/images/identity/HTML5_Badge_128.png) no-repeat 50% 50%;
-  background-size: contain;
-  z-index: 10;
-  opacity: 0.1;
-}
-h1, h2, h3, h4 {
-  font-weight: 600;
-}
-h1 {
-  position: fixed;
-  background: -webkit-linear-gradient(top, white 65%, rgba(255,255,255,0));
-  background: -moz-linear-gradient(top, white 65%, rgba(255,255,255,0));
-  background: -ms-linear-gradient(top, white 65%, rgba(255,255,255,0));
-  background: -o-linear-gradient(top, white 65%, rgba(255,255,255,0));
-  width: 100%;
-  height: 80px;
-  padding: 10px 10px 10px 1em;
-  left: 0;
-  top: 0;
-  margin: 0;
-}
-h1 img {
-  height: 30px;
-  vertical-align: middle;
-  margin-bottom: 8px;
-}
-a { color: navy; }
-pre {
-  background: #eee;
-  margin-left: 2em;
-  padding: 5px;
-  border-left: 3px solid #ccc;
-}
-</style>
 
-<h1><img src="images/io2012_logo.png"> HTML5 Slide Template</h1>
+![chefconf_logo](images/chefconf_logo.png)
+# HTML5 Slide Template
+
+This was created from the HTML5 slide template for Google I/O 2012. The original
+project can be found [here](https://code.google.com/p/io-2012-slides/).
 
 ## Configuring the slides
 
@@ -55,13 +12,28 @@ Some of the customizations include the title, Analytics tracking ID, speaker
 information (name, social urls, blog), web fonts to load, themes, and other
 general behavior.
 
-### Customizing the `#io12` hash
+### Customizing the `#ChefConf` hash
 
-The bottom of the slides include `#io12` by default. If you'd like to change
-this, please update the variable `$social-tags: '#io12';` in
+The bottom of the slides include `#ChefConf` by default. If you'd like to change
+this, please update the variable `$social-tags: '#ChefConf';` in
 [`/theme/scss/default.scss`](theme/scss/default.scss).
 
 See the next section on "Editing CSS" before you go editing things.
+
+## Authoring the slides
+
+You can write your slides in HTML or Markdown.
+
+### HTML
+
+If you choose to use HTML just
+edit the [template.html](template.html) file in the root of this repository.
+
+### Markdown
+
+Alternatively you can author your slides in Markdown and convert them to the
+proper HTML using the included Python script. See
+[scripts/md/README.md](scripts/md/README.md) for more details.
 
 ## Editing CSS
 
@@ -84,7 +56,7 @@ First, install compass:
 Next, you'll want to watch for changes to the exiting .scss files in [`/theme/scss`](theme/scss)
 and any new one you add:
 
-    $ cd io-2012-slides
+    $ cd chefconf-slides
     $ compass watch
 
 This command automatically recompiles the .scss file when you make a change.
@@ -107,7 +79,7 @@ The slides can be run locally from `file://` making development easy :)
 If at some point you should need a web server, use [`serve.sh`](serve.sh). It will
 launch a simple one and point your default browser to [`http://localhost:8000/template.html`](http://localhost:8000/template.html):
 
-    $ cd io-2012-slides
+    $ cd chefconf-slides
     $ ./serve.sh
 
 You can also specify a custom port:
@@ -125,6 +97,25 @@ To disable presenter mode, hit [http://localhost:8000/template.html?presentme=fa
 
 Presenter mode is sticky, so refreshing the page will persist your settings.
 
----
+# License and Author
 
-That's all she wrote!
+| &nbsp;               |                                          |
+|:---------------------|:-----------------------------------------|
+| **Original Author**  | Eric Bidelman (<ebidel@gmail.com>)       |
+| **Original Author**  | Luke Mahé (<lukem@google.com>)           |
+| **Author**           | Seth Chisamore (<schisamo@opscode.com>)  |
+| &nbsp;               |                                          |
+| **Copyright**        | Copyright (c) 2012 Google                |
+| **Copyright**        | Copyright (c) 2013 Opscode, Inc.         |
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
