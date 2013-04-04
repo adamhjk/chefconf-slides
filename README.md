@@ -5,6 +5,16 @@
 This was created from the HTML5 slide template for Google I/O 2012. The original
 project can be found [here](https://code.google.com/p/io-2012-slides/).
 
+## Using this template
+
+The easiest way to leverage this template is to fork the project and create a
+branch for your talk:
+
+    $ git checkout -b Eat-the-Whole-Bowl
+
+If you leave your copy of the master branch untouched you should be able to
+pull in improvements/tweaks from this repo as they come available.
+
 ## Configuring the slides
 
 Much of the deck is customized by changing the settings in [`slide_config.js`](slide_config.js).
