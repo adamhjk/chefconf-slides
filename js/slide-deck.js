@@ -331,10 +331,10 @@ SlideDeck.prototype.loadConfig_ = function(config) {
     var dataConfigContact = document.querySelector('[data-config-contact]');
 
     var html = [];
-    if (presenters.length == 1) {
-      var p = presenters[0];
+    var html2 = [];
 
-      html = [p.name, p.company].join('<br>');
+    for (var i = 0, p; p = presenters[i]; ++i) {
+      html.push([p.name, p.company].join('<br>'));
 
       var gplus = p.gplus ? '<span>g+</span><a href="' + p.gplus +
           '">' + p.gplus.replace(/https?:\/\//, '') + '</a>' : '';
@@ -349,26 +349,22 @@ SlideDeck.prototype.loadConfig_ = function(config) {
       var github = p.github ? '<span>github</span><a href="' + p.github +
           '">' + p.github.replace(/https?:\/\//, '') + '</a>' : '';
 
-      var html2 = [gplus, twitter, www, github].join('<br>');
+      html2.push([gplus, twitter, www, github].filter(Boolean).join('<br>'));
 
-      if (dataConfigContact) {
-        dataConfigContact.innerHTML = html2;
-      }
-    } else {
-      for (var i = 0, p; p = presenters[i]; ++i) {
-        html.push(p.name + ' - ' + p.company);
-      }
-      html = html.join('<br>');
-      if (dataConfigContact) {
-        dataConfigContact.innerHTML = html;
-      }
+    }
+
+    html = html.join('<br><br>');
+    html2 = html2.join('<br><br>');
+
+    if (dataConfigContact) {
+      dataConfigContact.innerHTML = html2;
     }
 
     var dataConfigPresenter = document.querySelector('[data-config-presenter]');
     if (dataConfigPresenter) {
       dataConfigPresenter.innerHTML = html;
       if (settings.eventTitle) {
-        dataConfigPresenter.innerHTML = dataConfigPresenter.innerHTML + '<br>' +
+        dataConfigPresenter.innerHTML = dataConfigPresenter.innerHTML + '<br><br>' +
                                         settings.eventTitle;
       }
     }
